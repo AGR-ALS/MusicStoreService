@@ -40,7 +40,11 @@ function renderTableRow(song) {
 
     const likesCell = songRow.querySelector('.likes-cell');
     likesCell.dataset.index = song.index;
-    likesCell.textContent = `${song.amountOfLikes} 👍`;
+
+    const countSpan = likesCell.querySelector('.likes-cell__count');
+    if (countSpan) {
+        countSpan.textContent = song.amountOfLikes;
+    }
 
     const fragment = document.createDocumentFragment();
     fragment.appendChild(songRow);

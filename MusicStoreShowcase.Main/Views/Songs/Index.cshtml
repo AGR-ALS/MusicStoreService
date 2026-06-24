@@ -1,0 +1,102 @@
+@model MusicStoreShowcase.ViewModels.SongsViewModel
+@using System.Globalization
+
+@{
+    ViewData["Title"] = "Music Store";
+}
+
+<template id="song-row-template">
+    <tr class="song-row" data-index="" style="cursor: pointer;">
+        <td><i class="bi bi-chevron-down expand-icon"></i></td>
+        <td class="col-index"></td>
+        <td class="col-title"></td>
+        <td class="col-artist"></td>
+        <td class="col-album"></td>
+        <td class="col-genre"></td>
+        <td class="likes-cell" data-index="">
+            <span class="likes-cell__badge">
+                <span class="likes-cell__count"></span>
+                <span class="likes-cell__icon">👍</span>
+            </span>
+        </td>
+    </tr>
+    <tr class="song-details d-none" data-index="">
+        <td colspan="7">
+            <div class="text-center py-4 text-muted">
+                <i class="bi bi-hourglass-split"></i> Click to load details...
+            </div>
+        </td>
+    </tr>
+</template>
+
+<div id="app"
+     data-seed="@Model.Seed"
+     data-language="@Model.Language"
+     data-likes="@Model.AverageLikes.ToString("0.0", CultureInfo.InvariantCulture)"
+     data-page="@Model.CurrentPage">
+
+    <section id="tableView" class="bg-white border rounded shadow-sm">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                <tr>
+                    <th style="width: 50px;"></th>
+                    <th>#</th>
+                    <th>Song</th>
+                    <th>Artist</th>
+                    <th>Album</th>
+                    <th>Genre</th>
+                    <th>Likes</th>
+                </tr>
+                </thead>
+                <tbody id="songsTableBody">
+                @foreach (var song in Model.Songs)
+                {
+                    <tr class="song-row" data-index="@song.Index" style="cursor: pointer;">
+                        <td><i class="bi bi-chevron-down expand-icon"></i></td>
+                        <td>@song.Index</td>
+                        <td>@song.Title</td>
+                        <td>@song.Artist</td>
+                        <td>@song.AlbumTitle</td>
+                        <td>@song.Genre</td>
+                        <td class="likes-cell" data-index="@song.Index">
+                            <span class="likes-cell__badge">
+                                <span class="likes-cell__count">@song.AmountOfLikes</span>
+                                <span class="likes-cell__icon">👍</span>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="song-details d-none" data-index="@song.Index">
+                        <td colspan="7">
+                            <div class="text-center py-4 text-muted">
+                                <i class="bi bi-hourglass-split"></i> Click to load details...
+                            </div>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex justify-content-between align-items-center p-3 border-top">
+            <button id="previousPageButton" type="button" class="btn btn-outline-primary"
+                    @(Model.CurrentPage == 1 ? "disabled" : "")>
+                <i class="bi bi-chevron-left"></i> Previous
+            </button>
+            <span id="pageNumber" class="fw-semibold">Page @Model.CurrentPage</span>
+            <button id="nextPageButton" type="button" class="btn btn-outline-primary">
+                Next <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <section id="galleryView" class="d-none">
+        <div id="galleryGrid" class="row g-3"></div>
+        <div id="gallerySentinel" class="py-4 text-center text-muted" style="min-height: 100px;">Loading...</div>
+    </section>
+</div>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.77/Tone.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@@tonejs/midi@@2.0.28/build/Midi.js"></script>
+    <script type="module" src="~/js/app.js" asp-append-version="true"></script>
+}

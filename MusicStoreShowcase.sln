@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStoreShowcase.Main", "MusicStoreShowcase.Main\MusicStoreShowcase.Main.csproj", "{782627F7-3A48-40D9-8ABB-643982A55B70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStoreShowcase.Domain", "MusicStoreShowcase.Domain\MusicStoreShowcase.Domain.csproj", "{E255CFA9-70F7-47E1-861C-30177B8CE225}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStoreShowcase.Application", "MusicStoreShowcase.Application\MusicStoreShowcase.Application.csproj", "{1715BAC0-2541-4D02-AD6C-F73811F5ADC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStoreShowcase.Infrastructure", "MusicStoreShowcase.Infrastructure\MusicStoreShowcase.Infrastructure.csproj", "{705B8932-4DDC-410A-BA04-7878FDD5F211}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{782627F7-3A48-40D9-8ABB-643982A55B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{782627F7-3A48-40D9-8ABB-643982A55B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{782627F7-3A48-40D9-8ABB-643982A55B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{782627F7-3A48-40D9-8ABB-643982A55B70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E255CFA9-70F7-47E1-861C-30177B8CE225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E255CFA9-70F7-47E1-861C-30177B8CE225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E255CFA9-70F7-47E1-861C-30177B8CE225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E255CFA9-70F7-47E1-861C-30177B8CE225}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1715BAC0-2541-4D02-AD6C-F73811F5ADC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1715BAC0-2541-4D02-AD6C-F73811F5ADC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1715BAC0-2541-4D02-AD6C-F73811F5ADC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1715BAC0-2541-4D02-AD6C-F73811F5ADC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{705B8932-4DDC-410A-BA04-7878FDD5F211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{705B8932-4DDC-410A-BA04-7878FDD5F211}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{705B8932-4DDC-410A-BA04-7878FDD5F211}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{705B8932-4DDC-410A-BA04-7878FDD5F211}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

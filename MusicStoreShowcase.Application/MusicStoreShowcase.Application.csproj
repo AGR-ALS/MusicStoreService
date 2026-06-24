@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MusicStoreShowcase.Domain\MusicStoreShowcase.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Bogus">
+        <HintPath>..\..\..\.nuget\packages\bogus\35.6.5\lib\net6.0\Bogus.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.Extensions.Options">
+        <HintPath>C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\9.0.15\Microsoft.Extensions.Options.dll</HintPath>
+      </Reference>
+      <Reference Include="SixLabors.Fonts">
+        <HintPath>..\..\..\.nuget\packages\sixlabors.fonts\3.0.0\lib\net8.0\SixLabors.Fonts.dll</HintPath>
+      </Reference>
+      <Reference Include="SixLabors.ImageSharp">
+        <HintPath>..\..\..\.nuget\packages\sixlabors.imagesharp\4.0.0\lib\net8.0\SixLabors.ImageSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="SixLabors.ImageSharp.Drawing">
+        <HintPath>..\..\..\.nuget\packages\sixlabors.imagesharp.drawing\3.0.0\lib\net8.0\SixLabors.ImageSharp.Drawing.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>

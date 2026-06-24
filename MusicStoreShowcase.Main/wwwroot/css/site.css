@@ -1,0 +1,116 @@
+header.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background: #fff;
+}
+
+.container.mt-3 {
+  margin-top: 0.5rem;
+}
+
+a {
+  color: #0077cc;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.song-row {
+  cursor: pointer;
+}
+
+.song-row:hover {
+  background-color: #f8f9fa;
+}
+
+.song-details {
+  background-color: #f8f9fa;
+}
+
+.expand-icon {
+  transition: transform 0.2s;
+}
+
+.player-container {
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.progress-bar-custom {
+  width: 100%;
+  cursor: pointer;
+}
+
+.time-display {
+  font-size: 0.9em;
+  font-variant-numeric: tabular-nums;
+}
+
+.lyric-line {
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.lyric-line.active {
+  background-color: #e7f1ff;
+}
+
+#galleryGrid .card {
+  transition: transform 0.2s;
+}
+
+#galleryGrid .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.likes-cell__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  background-color: #0d6efd;
+  color: #fff;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.likes-cell__count {
+  font-variant-numeric: tabular-nums;
+}
+
+.likes-cell__icon {
+  font-size: 0.85rem;
+}

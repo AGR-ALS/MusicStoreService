@@ -1,0 +1,23 @@
+﻿:root {
+  --color-primary: #0077cc;
+  --color-primary-dark: #1861ac;
+  --color-primary-bg: #1b6ec2;
+  --color-border: #e5e5e5;
+  --color-bg-muted: #f8f9fa;
+  --shadow-sm: 0 .125rem .25rem rgba(0, 0, 0, .075);
+  --shadow-md: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+a { color: var(--color-primary); }
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--color-primary-bg);
+  border-color: var(--color-primary-dark);
+}
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}

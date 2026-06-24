@@ -18,11 +18,12 @@ DeepLTranslationSettings__ApiKey="your_api_key"
 ## Launch the App
 ### On Windows
 ```
-docker build -t music-service . ; docker run -p 8080:1544 -d --name music-service music-service
+docker build -t music-service . ; docker run -p 8080:8080 -d --name music-service --env-file .env music-service
 ```
+
 ### On Linux
 ```
-docker build -t music-service . && docker run -p 8080:1544 -d --name music-service music-service
+docker build -t music-service . && docker run -p 8080:8080 -d --name music-service --env-file .env music-service
 ```
 
 ### You can access the app at [localhost:8080](http://localhost:8080)

@@ -16,11 +16,11 @@ public static class DiServicesExtension
     public static void AddDiServices(this IServiceCollection services)
     {
         services.AddHttpClient();
-        services.AddSingleton<ICoverGenerator, CoverGenerator>();
-        services.AddSingleton<IMusicGenerator, MusicGenerator>();
-        services.AddSingleton<ISongGenerator, SongGenerator>();
-        services.AddSingleton<ISongService, SongService>();
-        services.AddSingleton<ILyricsGenerator, LyricsGenerator>();
-        services.AddSingleton<ITranslationService, DeepLTranslationService>();
+        services.AddScoped<ICoverGenerator, CoverGenerator>();
+        services.AddScoped<IMusicGenerator, MusicGenerator>();
+        services.AddScoped<ISongGenerator, SongGenerator>();
+        services.AddScoped<ISongService, SongService>();
+        services.AddScoped<ILyricsGenerator, LyricsGenerator>();
+        services.AddScoped<ITranslationService, DeepLTranslationService>();
     }
 }
